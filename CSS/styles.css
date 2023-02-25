@@ -1,0 +1,50 @@
+:root {
+    --Red__color:rgb(172, 5, 5);
+    --Dark__color:#a17e68;
+    --light__color:#d6c3aA;
+}
+
+* {
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+}
+
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    height:80vh;
+}
+
+.Tablero {
+    width:45%;
+    margin:10vh auto;
+}
+
+.Fila:nth-child(2n + 1) .casilla:nth-child(2n + 1) {
+    background-color:var(--light__color);
+}
+
+.Fila:nth-child(2n + 1) .casilla:nth-child(2n + 2) {
+    background-color:var(--Dark__color);
+}
+
+.Fila:nth-child(2n + 2) .casilla:nth-child(2n + 1) {
+    background-color:var(--Dark__color);
+}
+
+.Fila:nth-child(2n + 2) .casilla:nth-child(2n + 2) {
+    background-color:var(--light__color);
+}
+
+.Fila {
+    height:67px;
+    width:100%;
+    margin-bottom:8px;
+    display:flex;
+}
+
+.casilla {
+    width:75px;
+    height:75px;
+    border:1px solid black;
+}
