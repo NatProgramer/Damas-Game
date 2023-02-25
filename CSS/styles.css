@@ -1,7 +1,13 @@
 :root {
-    --Red__color:rgb(172, 5, 5);
+    --style__border:2px solid #535353;
+    --tamaño__casilla:75px;
+    --tamaño__ficha: calc(var(--tamaño__casilla) * 0.8);
     --Dark__color:#a17e68;
     --light__color:#d6c3aA;
+    --ficha__D:#292929;
+    --ficha__L:#d50a0a;
+    --color__borde_ficha_D:#525252;
+    --color__borde_ficha_L:#770707;
 }
 
 * {
@@ -12,12 +18,21 @@
 
 body {
     font-family:Arial, Helvetica, sans-serif;
-    height:80vh;
+    height:100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content:space-around;
+    background-color:antiquewhite;
+}
+
+.title {
+    text-align:center;
 }
 
 .Tablero {
+    align-self:center;
     width:45%;
-    margin:10vh auto;
+    border:var(--style__border);
 }
 
 .Fila:nth-child(2n + 1) .casilla:nth-child(2n + 1) {
@@ -44,7 +59,31 @@ body {
 }
 
 .casilla {
-    width:75px;
-    height:75px;
-    border:1px solid black;
+    width:var(--tamaño__casilla);
+    height:var(--tamaño__casilla);
+    border:var(--style__border);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.Ficha {
+    width:var(--tamaño__ficha);
+    height:var(--tamaño__ficha);
+    border-radius:50%;
+    border:8px double;
+}
+
+.Ficha__reina {
+    border:18px double;
+}
+
+.Ficha__D {
+    background-color:var(--ficha__D);
+    border-color:var(--color__borde_ficha_D);
+}
+
+.Ficha__L {
+    background-color:var(--ficha__L);
+    border-color:var(--color__borde_ficha_L);
 }
